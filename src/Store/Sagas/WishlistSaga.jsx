@@ -4,7 +4,7 @@ import {ADD_WISHLIST,ADD_WISHLIST_RED, DELETE_WISHLIST, DELETE_WISHLIST_RED, GET
 
 function* createWishlistSaga(action){   //executer
     var response = yield createWishlistAPI(action.payload)
-    yield put({type:ADD_WISHLIST_Re,data:response.data})
+    yield put({type:ADD_WISHLIST_RED,data:response.data})
 }
 function* getWishlistSaga(){   //executer
     var response = yield getWishlistAPI()
